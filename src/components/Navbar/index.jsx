@@ -195,6 +195,7 @@ const Navbar = ({switchMode, mode}) => {
                         <MobileLink href='#projects' onClick={() => {
                             setIsOpen(!isOpen)
                         }}>Projects</MobileLink>
+
                         <Switch
                             color="secondary"
                             defaultChecked
