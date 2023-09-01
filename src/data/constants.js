@@ -286,7 +286,7 @@ export const projects = [
         tags: ["React Js" , "CSS" , "ES6"],
         category: "web app",
         github: "https://github.com/What-a-tops/react-tenzies-game",
-        webapp: "https://podstream.netlify.app/",
+        webapp: "https://64f1a990e5326045a42093b6--bejewelled-kleicha-4f81d2.netlify.app/",
 
     },
     {
@@ -319,7 +319,7 @@ export const projects = [
         tags: ["React", "Vite", "MUI", "Firebase"],
         category: "web app",
         github: "https://github.com/What-a-tops/react-firebase-chat",
-        webapp: "https://brain-tumor.netlify.app/",
+        webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
 
     },
     {
@@ -332,6 +332,6 @@ export const projects = [
         tags: ["React", "Vite", "CSS", "ES6"],
         category: "web app",
         github: "https://github.com/What-a-tops/react-ecart",
-        webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
+        webapp: "https://main--unique-biscochitos-97cf49.netlify.app/"
     },
 ];
