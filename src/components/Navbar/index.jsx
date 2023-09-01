@@ -102,7 +102,7 @@ const GitHubButton = styled.a`
   }
 `;
 const Span = styled.div`
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.primary};
   padding: 0 4px;
   font-weight: bold;
   font-size: 18px;
@@ -159,7 +159,7 @@ const Navbar = ({switchMode, mode}) => {
             <NavContainer>
                 <NavLogo to='/'>
                     <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-                        <Span>Portfolio</Span>
+                        <Span>DADOTS</Span>
                     </a>
                 </NavLogo>
                 <MobileIcon>

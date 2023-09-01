@@ -87,7 +87,7 @@ function Footer() {
     return (
         <FooterContainer>
             <FooterWrapper>
-                <Logo>Dadots</Logo>
+                <Logo>DADOTS</Logo>
                 <Nav>
                     <NavLink href="#about">About</NavLink>
                     <NavLink href="#skills">Skills</NavLink>
