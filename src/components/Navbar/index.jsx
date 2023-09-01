@@ -195,7 +195,11 @@ const Navbar = ({switchMode, mode}) => {
                         <MobileLink href='#projects' onClick={() => {
                             setIsOpen(!isOpen)
                         }}>Projects</MobileLink>
-                        <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+                        <Switch
+                            color="secondary"
+                            defaultChecked
+                            onChange={() => switchMode(mode === false ? "dark" : "light")}
+                        />
                     </MobileMenu>
                 }
             </NavContainer>
