@@ -47,6 +47,7 @@ const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
+    
     color: ${({ theme }) => theme.primary};
     border-bottom: 2.5px solid ${({ theme }) => theme.primary};
     line-height: 2.5;

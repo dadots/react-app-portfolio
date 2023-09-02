@@ -6,6 +6,7 @@ import crud from '../images/react-crud-toolkit.png'
 import tenzies from '../images/tenzies.png'
 import msg from '../images/Web_Messaging_firbase.png'
 import ecart from '../images/react-ecart.png'
+import datastudio from '../images/datastudio.jpg'
 
 export const Bio = {
     name: "Darius Paul Bacate",
@@ -277,6 +278,23 @@ export const projects = [
         webapp: "https://docs.google.com/presentation/d/1jWMntWIKQ_N0aCt7C-9z31_4szewIBVF/edit?usp=sharing&ouid=109611579478848088730&rtpof=true&sd=true",
     },
     {
+        id: 10,
+        title: "Bagyo Odette Monitoring Dashboard",
+        date: "Jan 2021 - Mar 2021",
+        description:
+            "A dashboard that monitors the numbers of affected cell sites within Cebu. The purposes of this task is to identify the damages and possible restorations upon assessed onsite.",
+        image: datastudio,
+        tags: [
+            "Data Studio",
+            "Spreedsheet",
+            "MySQL",
+            "Google Email Login"
+        ],
+        category: "web app",
+        github: "",
+        webapp: "",
+    },
+    {
         id: 0,
         title: "Tenzies",
         date: "Jan 2023 - Feb 2023",
@@ -294,7 +312,7 @@ export const projects = [
         title: "React CRUD",
         date: "Feb 2023 - Mar 2023",
         description:
-            "An assessment tutorial from starting to learn a react with custom ui and toolkits.",
+            "An simple create update and delete wherein it is save through JSON-server as backend.",
         image: crud,
         tags: [
             "React Js",
@@ -307,14 +325,14 @@ export const projects = [
         ],
         category: "web app",
         github: "https://github.com/What-a-tops/vite-redux-json",
-        webapp: "https://vexa-app.netlify.app/",
+        webapp: "",
     },
     {
         id: 2,
         title: "Message Web App",
         date: "April 2023 - May 2023",
         description:
-            "A simple messaging app that its realtime by Firebase with simulataneous chats between user accounts.",
+            "A simple messaging app that it is realtime through Firebase with realtime chats between user accounts.",
         image: msg,
         tags: ["React", "Vite", "MUI", "Firebase"],
         category: "web app",
