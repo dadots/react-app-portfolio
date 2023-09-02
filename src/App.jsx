@@ -34,7 +34,6 @@ const Wrapper = styled.div`
 
 const App = () => {
     const switchMode = (mode) => {
-        console.log(mode)
         let mood = mode === "dark";
         setMode(mood);
     }

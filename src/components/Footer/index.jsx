@@ -30,36 +30,6 @@ const Logo = styled.h1`
   color: ${({ theme }) => theme.primary};
 `;
 
-const Nav = styled.nav`
-  width: 100%;
-  max-width: 800px;
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-  }
-`;
-
-const NavLink = styled.a`
-color: ${({ theme }) => theme.text_primary};
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
 const SocialMediaIcons = styled.div`
   display: flex;
   margin-top: 1rem;
@@ -83,17 +53,22 @@ const Copyright = styled.p`
   text-align: center;
 `;
 
+const Desc = styled.div`
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    color: ${({ theme }) => theme.text_secondary};
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+`;
+
 function Footer() {
     return (
         <FooterContainer>
             <FooterWrapper>
                 <Logo>DADOTS</Logo>
-                <Nav>
-                    <NavLink href="#about">About</NavLink>
-                    <NavLink href="#skills">Skills</NavLink>
-                    <NavLink href="#experience">Experience</NavLink>
-                    <NavLink href="#projects">Projects</NavLink>
-                </Nav>
+                <Desc>You may visit on my social accounts.</Desc>
                 <SocialMediaIcons>
                     <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
                     <SocialMediaIcon href={Bio.github} target="display"><GithubIcon /></SocialMediaIcon>
