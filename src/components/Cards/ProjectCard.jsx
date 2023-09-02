@@ -7,7 +7,7 @@ const Button = styled.button`
     width: 100%;
     padding: 10px;
     background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.text_black};
+    color: ${({ theme }) => theme.text_primary};
     font-size: 14px;
     font-weight: 700;
     border: none;
@@ -21,7 +21,7 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
-    border: 0.1px solid #854CE6;
+    border: 0.1px solid rgb(1, 106, 112);
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     overflow: hidden;
     padding: 26px 20px;
@@ -33,6 +33,7 @@ const Card = styled.div`
         transform: translateY(-10px);
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
+        border: 0.1px solid rgb(0, 223, 162);
     }
     &:hover ${Button} {
         display: block;

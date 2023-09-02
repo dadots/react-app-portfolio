@@ -15,7 +15,8 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 50px 0px;
+    padding-bottom: 50px;
+    background-color: ${({theme}) => theme.card_light};
 `
 
 const Wrapper = styled.div`
@@ -54,7 +55,7 @@ const TimelineSection = styled.div`
     gap: 12px;
 `;
 
-export const Desc = styled.div`
+const Desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -75,8 +76,8 @@ const Experience = () => {
                             experiences.map((experience,index) => (
                                 <TimelineItem key={index}>
                                     <TimelineSeparator>
-                                        <TimelineDot variant="outlined" color="secondary"/>
-                                        {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                                        <TimelineDot variant="outlined" color="success"/>
+                                        {index !== experiences.length - 1 && <TimelineConnector style={{ background: 'rgb(0, 223, 162)' }} />}
                                     </TimelineSeparator>
                                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                                         <ExperienceCards experience={experience} />

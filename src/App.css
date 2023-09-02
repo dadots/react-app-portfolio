@@ -31,7 +31,7 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);
+  background: -webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%);
   border-radius: 6px;
 }
 

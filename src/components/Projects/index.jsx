@@ -9,6 +9,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
+    padding-bottom: 20px;
 `
 
 const Wrapper = styled.div`
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
     }
 `
 
-export const Title = styled.h1`
+const Title = styled.h1`
     font-size: 42px;
     text-align: center;
     font-weight: 600;

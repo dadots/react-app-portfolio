@@ -8,6 +8,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
+    padding-bottom: 20px;
 `
 
 const Wrapper = styled.div`
@@ -59,7 +60,7 @@ const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
+  border: 0.1px solid rgb(1, 106, 112);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
@@ -67,6 +68,7 @@ const Skill = styled.div`
   &:hover{
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
+    border: 0.1px solid rgb(0, 223, 162);
   }
   @media (max-width: 768px) {
     max-width: 400px;
