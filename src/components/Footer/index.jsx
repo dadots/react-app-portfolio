@@ -77,7 +77,6 @@ function Footer() {
                 <Copyright>
                     &copy; 2023 Darius Paul Bacate. All rights reserved.
                 </Copyright>
-
             </FooterWrapper>
         </FooterContainer>
     );

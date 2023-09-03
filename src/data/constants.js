@@ -8,6 +8,37 @@ import msg from '../images/Web_Messaging_firbase.png'
 import ecart from '../images/react-ecart.png'
 import datastudio from '../images/datastudio.jpg'
 
+export const menu = [
+    {
+        id: 1,
+        name: 'About',
+        link: 'about',
+        icon: 'circle-exclamation-solid.svg',
+        isActive: 'active'
+    },
+    {
+        id: 2,
+        name: 'Skills',
+        link: 'skills',
+        icon: 'lightbulb-regular.svg',
+        isActive: ''
+    },
+    {
+        id: 3,
+        name: 'Experience',
+        link: 'experience',
+        icon: 'suitcase-solid.svg',
+        isActive: ''
+    },
+    {
+        id: 4,
+        name: 'Projects',
+        link: 'projects',
+        icon: 'lightbulb-regular.svg',
+        isActive: ''
+    },
+]
+
 export const Bio = {
     name: "Darius Paul Bacate",
     roles: [

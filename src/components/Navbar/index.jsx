@@ -1,8 +1,8 @@
-import { Link as LinkR } from "react-router-dom";
 import styled from 'styled-components'
 import {FaBars} from "react-icons/fa";
 import {useState} from "react";
 import {Switch} from "@mui/material";
+import {menu} from "../../data/constants.js";
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};
@@ -16,7 +16,7 @@ const Nav = styled.div`
   top: 0;
   z-index: 10;
   @media (max-width: 960px) {
-    trastion: 0.8s all ease;
+    transition: 0.8s all ease;
   }
 `;
 const NavContainer = styled.div`
@@ -29,7 +29,7 @@ const NavContainer = styled.div`
   padding: 0 24px;
   max-width: 1200px;
 `;
-const NavLogo = styled(LinkR)`
+const NavLogo = styled.a`
   width: 80%;
   padding: 0 6px;
   display: flex;
@@ -37,7 +37,7 @@ const NavLogo = styled(LinkR)`
   align-items: center;
   text-decoration: none;
   @media (max-width: 640px) {
-    padding: 0 0px;
+    padding: 0 0;
   }
 `;
 const NavLink = styled.a`
@@ -47,13 +47,13 @@ const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    
     color: ${({ theme }) => theme.primary};
     border-bottom: 2.5px solid ${({ theme }) => theme.primary};
     line-height: 2.5;
   }
   
   &.active {
+    color: ${({ theme }) => theme.primary};
     border-bottom: 2.5px solid ${({ theme }) => theme.primary};
     line-height: 2.5;
   }
@@ -103,7 +103,7 @@ const MobileIcon = styled.div`
       cursor: pointer;
       color: ${({theme}) => theme.text_primary};
     }
-`
+`;
 const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@ const MobileMenu = styled.div`
   @media screen and (min-width: 775px) {
     display: none;
   }
-`
+`;
 const MobileLink = styled.a`
   color: ${({ theme }) => theme.primary};
   font-weight: 500;
@@ -134,17 +134,20 @@ const MobileLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
-`
+`;
 
+// eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [page, setPage] = useState('DADOTS');
+
     return (
         <Nav>
             <NavContainer>
-                <NavLogo to='/'>
-                    <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-                        <Span>DADOTS</Span>
-                    </a>
+                <NavLogo href='#about' onClick={() => setPage('DADOTS')}>
+                    {/*<a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20', cursor: 'pointer' }}>*/}
+                        <Span>{page}</Span>
+                    {/*</a>*/}
                 </NavLogo>
                 <MobileIcon>
                     <FaBars onClick={() => {
@@ -152,10 +155,17 @@ const Navbar = ({switchMode, mode}) => {
                     }} />
                 </MobileIcon>
                 <NavItems>
-                    <NavLink href="#about" activeClassName="active">About</NavLink>
-                    <NavLink href='#skills'>Skills</NavLink>
-                    <NavLink href='#experience'>Experience</NavLink>
-                    <NavLink href='#projects'>Projects</NavLink>
+                    {
+                        menu.map((tab, index) => (
+                            <NavLink key={index}
+                                      // className={`${tab.isActive}`}
+                                      href={`#${tab.link}`}
+                                      onClick={() => setPage(tab.name === 'About' ? 'DADOTS' : tab.name.toUpperCase())}
+                            >
+                                {tab.name}
+                            </NavLink>
+                        ))
+                    }
                 </NavItems>
                 <ButtonContainer>
                     <Switch
@@ -176,20 +186,17 @@ const Navbar = ({switchMode, mode}) => {
                 {
                     isOpen &&
                     <MobileMenu isOpen={isOpen}>
-                        <MobileLink href="#about" onClick={() => {
-                            setIsOpen(!isOpen)
-                        }}
-                        >About</MobileLink>
-                        <MobileLink href='#skills' onClick={() => {
-                            setIsOpen(!isOpen)
-                        }}
-                        >Skills</MobileLink>
-                        <MobileLink href='#experience' onClick={() => {
-                            setIsOpen(!isOpen)
-                        }}>Experience</MobileLink>
-                        <MobileLink href='#projects' onClick={() => {
-                            setIsOpen(!isOpen)
-                        }}>Projects</MobileLink>
+                        {
+                            menu.map((tab, index) => (
+                                <MobileLink
+                                    key={index}
+                                    className={`${tab.isActive}`}
+                                    href={`#${tab.link}`}
+                                    onClick={() => {
+                                    setIsOpen(!isOpen)
+                                }}>{tab.name}</MobileLink>
+                            ))
+                        }
 
                         <Switch
                             sx={{
