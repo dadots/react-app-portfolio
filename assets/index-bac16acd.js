@@ -714,7 +714,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     @media (max-width: 768px) {
         font-size: 16px;
     }
-`,Gk=()=>w.jsx(Bk,{id:"experience",children:w.jsxs(Uk,{children:[w.jsx(Hk,{children:"Experience"}),w.jsx(Wk,{children:"Below are some of my experiences based on my resume."}),w.jsx(Vk,{children:w.jsx(Q3,{children:Of.map((e,t)=>w.jsxs(uk,{children:[w.jsxs(mk,{children:[w.jsx(Ak,{variant:"outlined",color:"success"}),t!==Of.length-1&&w.jsx(Sk,{style:{background:"-webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%)"}})]}),w.jsx(tk,{sx:{py:"12px",px:2},children:w.jsx($k,{experience:e})})]},t))})})]})}),Qk=$.button`
+`,Gk=()=>w.jsx(Bk,{id:"experience",children:w.jsxs(Uk,{children:[w.jsx(Hk,{children:"Experience"}),w.jsx(Wk,{children:"Below are some of my experiences base on my resume."}),w.jsx(Vk,{children:w.jsx(Q3,{children:Of.map((e,t)=>w.jsxs(uk,{children:[w.jsxs(mk,{children:[w.jsx(Ak,{variant:"outlined",color:"success"}),t!==Of.length-1&&w.jsx(Sk,{style:{background:"-webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%)"}})]}),w.jsx(tk,{sx:{py:"12px",px:2},children:w.jsx($k,{experience:e})})]},t))})})]})}),Qk=$.button`
     display: none;
     width: 100%;
     padding: 10px;
