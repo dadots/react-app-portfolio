@@ -356,7 +356,7 @@ export const projects = [
         ],
         category: "web app",
         github: "https://github.com/What-a-tops/vite-redux-json",
-        webapp: "",
+        webapp: "https://what-a-tops.github.io/vite-redux-json/",
     },
     {
         id: 2,
