@@ -10,6 +10,7 @@ import Experience from "./components/Experience/index.jsx";
 import Projects from "./components/Projects/index.jsx";
 import ProjectDetails from "./components/Projects/ProjectDetails/index.jsx";
 import Footer from "./components/Footer/index.jsx";
+import ScrollTop from "./components/ScrollTop/ScrollTop.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -41,28 +42,33 @@ const App = () => {
     const [mode, setMode] = useState(true);
     const [openModal, setOpenModal] = useState({ state: false, project: null });
     return (
-        <ThemeProvider theme={mode ? darkTheme : lightTheme}>
-            <Router>
-                <Navbar
-                    switchMode={switchMode}
-                    mode={mode}
-                />
-                <Body>
-                    <Hero />
-                    <Wrapper >
-                        <Skills />
-                        <Experience />
-                    </Wrapper>
+        <div className="App">
+            <ThemeProvider theme={mode ? darkTheme : lightTheme}>
+                <Router>
+                    <Navbar
+                        switchMode={switchMode}
+                        mode={mode}
+                    />
+                    <Body>
+                        <Hero />
+                        <Wrapper >
+                            <Skills />
+                            <Experience />
+                        </Wrapper>
 
-                    <Projects openModal={openModal} setOpenModal={setOpenModal} />
+                        <Projects openModal={openModal} setOpenModal={setOpenModal} />
 
-                    <Footer />
-                    {openModal.state &&
-                        <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-                    }
-                </Body>
-            </Router>
-        </ThemeProvider>
+                        <Footer />
+                        {openModal.state &&
+                            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+                        }
+                    </Body>
+                </Router>
+            </ThemeProvider>
+            <ScrollTop />
+        </div>
+
+
     )
 }
 

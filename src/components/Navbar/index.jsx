@@ -114,8 +114,7 @@ const MobileMenu = styled.div`
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  //background: ${({ theme }) => theme.card_light+99};
-  background: rgba(25, 25, 36, 0.9);
+  background: ${({ theme }) => theme.card_mobile};
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
   border-radius: 0 0 20px 20px;
@@ -127,7 +126,7 @@ const MobileMenu = styled.div`
   }
 `;
 const MobileLink = styled.a`
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
