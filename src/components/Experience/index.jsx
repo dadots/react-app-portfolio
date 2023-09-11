@@ -64,20 +64,21 @@ const Desc = styled.div`
         font-size: 16px;
     }
 `;
+
 const Experience = () => {
     return (
         <Container id="experience">
             <Wrapper>
                 <Title>Experience</Title>
-                <Desc>Below are some of my experiences based on my resume.</Desc>
+                <Desc>Below are some of my experiences base on my resume.</Desc>
                 <TimelineSection>
                     <Timeline>
                         {
                             experiences.map((experience,index) => (
                                 <TimelineItem key={index}>
                                     <TimelineSeparator>
-                                        <TimelineDot variant="outlined" color="success"/>
-                                        {index !== experiences.length - 1 && <TimelineConnector style={{ background: '-webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%)' }} />}
+                                        <TimelineDot variant="outlined" sx={{borderColor: '#00DFA2'}}/>
+                                        {index !== experiences.length - 1 && <TimelineConnector sx={{ background: '-webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%)' }} />}
                                     </TimelineSeparator>
                                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                                         <ExperienceCards experience={experience} />

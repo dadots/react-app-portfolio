@@ -140,7 +140,8 @@ const SubTitle = styled.div`
   color: ${({ theme }) => theme.text_primary + 95};
 
   @media screen and (max-width: 960px) {
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   @media screen and (max-width: 640px) {
@@ -197,8 +198,8 @@ const Image = styled.img`
   }
 
   @media screen and (max-width: 640px) {
-    max-height: 280px;
-    max-width: 280px;
+    max-height: 250px;
+    max-width: 250px;
   }
 `
 

@@ -68,7 +68,7 @@ const Skill = styled.div`
   &:hover{
     box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
     transform: translateY(-5px);
-    border: 0.1px solid rgb(0, 223, 162);
+    border: 1px solid #4FD3C4;
   }
   @media (max-width: 768px) {
     max-width: 400px;

@@ -33,7 +33,7 @@ const Card = styled.div`
         transform: translateY(-10px);
         box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
         filter: brightness(1.1);
-        border: 0.1px solid rgb(0, 223, 162);
+        border: 1px solid #4FD3C4;
     }
     &:hover ${Button} {
         display: block;
