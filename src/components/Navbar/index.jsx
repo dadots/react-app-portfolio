@@ -48,7 +48,7 @@ const NavLink = styled.a`
   text-decoration: none;
   :hover {
     color: ${({ theme }) => theme.primary};
-    border-bottom: 2.5px solid ${({ theme }) => theme.primary};
+    border-bottom: 1.5px solid ${({ theme }) => theme.primary};
     line-height: 2.5;
   }
   
@@ -136,6 +136,7 @@ const MobileLink = styled.a`
   }
 `;
 
+
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -145,9 +146,7 @@ const Navbar = ({switchMode, mode}) => {
         <Nav>
             <NavContainer>
                 <NavLogo href='#about' onClick={() => setPage('DADOTS')}>
-                    {/*<a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20', cursor: 'pointer' }}>*/}
                         <Span>{page}</Span>
-                    {/*</a>*/}
                 </NavLogo>
                 <MobileIcon>
                     <FaBars onClick={() => {
@@ -174,11 +173,13 @@ const Navbar = ({switchMode, mode}) => {
                         onChange={() => switchMode(mode === false ? "dark" : "light")}
                         sx={{
                             "&.MuiSwitch-root .MuiSwitch-switchBase": {
-                                color: '#FFFFFF'
+                                color: '#FFFFFF',
+                                borderStyle: 'solid'
                             },
 
                             "&.MuiSwitch-root .Mui-checked": {
-                                color: 'rgb(0, 223, 162)'
+                                color: 'rgb(0, 223, 162)',
+                                borderStyle: 'solid'
                             }
                         }}
                     />
