@@ -143,16 +143,12 @@ const Navbar = ({switchMode, mode}) => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY >= 0 && window.scrollY < 660) {
-                console.log('about')
                 setActiveNav('#about');
             } else if (window.scrollY >= 660 && window.scrollY < 1700) {
-                console.log('skills')
                 setActiveNav('#skills');
             } else if (window.scrollY >= 1700 && window.scrollY < 3000) {
-                console.log('experience')
                 setActiveNav('#experience');
             } else if (window.scrollY >= 3000) {
-                console.log('projects')
                 setActiveNav('#projects');
             }
         })
