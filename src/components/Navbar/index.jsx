@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 import {FaBars} from "react-icons/fa";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Switch} from "@mui/material";
 import {menu} from "../../data/constants.js";
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   height: 80px;
   display: flex;
   align-items: center;
@@ -54,7 +53,7 @@ const NavLink = styled.a`
   
   &.active {
     color: ${({ theme }) => theme.primary};
-    border-bottom: 2.5px solid ${({ theme }) => theme.primary};
+    border-bottom: 1.5px solid ${({ theme }) => theme.primary};
     line-height: 2.5;
   }
 `;
@@ -131,22 +130,39 @@ const MobileLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  &:hover {
+  &:hover, &.active {
     color: ${({ theme }) => theme.primary};
   }
 `;
 
-
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [page, setPage] = useState('DADOTS');
+    const [activeNav, setActiveNav] = useState('#about')
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY >= 0 && window.scrollY < 660) {
+                console.log('about')
+                setActiveNav('#about');
+            } else if (window.scrollY >= 660 && window.scrollY < 1700) {
+                console.log('skills')
+                setActiveNav('#skills');
+            } else if (window.scrollY >= 1700 && window.scrollY < 3000) {
+                console.log('experience')
+                setActiveNav('#experience');
+            } else if (window.scrollY >= 3000) {
+                console.log('projects')
+                setActiveNav('#projects');
+            }
+        })
+    }, [])
 
     return (
         <Nav>
             <NavContainer>
-                <NavLogo href='#about' onClick={() => setPage('DADOTS')}>
-                        <Span>{page}</Span>
+                <NavLogo href='#about'>
+                        <Span>DADOTS</Span>
                 </NavLogo>
                 <MobileIcon>
                     <FaBars onClick={() => {
@@ -157,9 +173,9 @@ const Navbar = ({switchMode, mode}) => {
                     {
                         menu.map((tab, index) => (
                             <NavLink key={index}
-                                      // className={`${tab.isActive}`}
-                                      href={`#${tab.link}`}
-                                      onClick={() => setPage(tab.name === 'About' ? 'DADOTS' : tab.name.toUpperCase())}
+                                     href={`#${tab.link}`}
+                                     onClick={() => setActiveNav(`#${tab.link}`)}
+                                     className={activeNav === `#${tab.link}` ? 'active' : ''}
                             >
                                 {tab.name}
                             </NavLink>
@@ -190,11 +206,14 @@ const Navbar = ({switchMode, mode}) => {
                         {
                             menu.map((tab, index) => (
                                 <MobileLink
+                                    // onClick={() => setActiveNav(`#${tab.link}`)}
                                     key={index}
-                                    className={`${tab.isActive}`}
+                                    className={activeNav === `#${tab.link}` ? tab.isActive : ''}
                                     href={`#${tab.link}`}
                                     onClick={() => {
-                                    setIsOpen(!isOpen)
+                                        setActiveNav(`#${tab.link}`)
+                                        setIsOpen(!isOpen)
+
                                 }}>{tab.name}</MobileLink>
                             ))
                         }

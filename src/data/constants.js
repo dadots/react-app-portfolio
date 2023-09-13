@@ -21,21 +21,21 @@ export const menu = [
         name: 'Skills',
         link: 'skills',
         icon: 'lightbulb-regular.svg',
-        isActive: ''
+        isActive: 'active'
     },
     {
         id: 3,
         name: 'Experience',
         link: 'experience',
         icon: 'suitcase-solid.svg',
-        isActive: ''
+        isActive: 'active'
     },
     {
         id: 4,
         name: 'Projects',
         link: 'projects',
         icon: 'lightbulb-regular.svg',
-        isActive: ''
+        isActive: 'active'
     },
 ]
 
