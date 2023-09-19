@@ -9,13 +9,13 @@ import ecart from '../images/react-ecart.png'
 import datastudio from '../images/datastudio.jpg'
 
 export const menu = [
-    {
-        id: 1,
-        name: 'About',
-        link: 'about',
-        icon: 'circle-exclamation-solid.svg',
-        isActive: 'active'
-    },
+    // {
+    //     id: 1,
+    //     name: 'About',
+    //     link: 'about',
+    //     icon: 'circle-exclamation-solid.svg',
+    //     isActive: 'active'
+    // },
     {
         id: 2,
         name: 'Skills',

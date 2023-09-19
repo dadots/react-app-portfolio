@@ -154,6 +154,14 @@ const Navbar = ({switchMode, mode}) => {
         })
     }, [])
 
+    const scrollUp = (e) => {
+        e.preventDefault()
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
         <Nav>
             <NavContainer>
@@ -166,6 +174,13 @@ const Navbar = ({switchMode, mode}) => {
                     }} />
                 </MobileIcon>
                 <NavItems>
+                    <NavLink
+                        href={`#about`}
+                        onClick={scrollUp}
+                        className={activeNav === `#about` ? 'active' : ''}
+                    >
+                        About
+                    </NavLink>
                     {
                         menu.map((tab, index) => (
                             <NavLink key={index}
@@ -199,10 +214,16 @@ const Navbar = ({switchMode, mode}) => {
                 {
                     isOpen &&
                     <MobileMenu isOpen={isOpen}>
+                        <MobileLink
+                            href={`#about`}
+                            onClick={scrollUp}
+                            className={activeNav === `#about` ? 'active' : ''}
+                        >
+                            About
+                        </MobileLink>
                         {
                             menu.map((tab, index) => (
                                 <MobileLink
-                                    // onClick={() => setActiveNav(`#${tab.link}`)}
                                     key={index}
                                     className={activeNav === `#${tab.link}` ? tab.isActive : ''}
                                     href={`#${tab.link}`}
