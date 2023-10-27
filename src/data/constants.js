@@ -7,6 +7,7 @@ import tenzies from '../images/tenzies.png'
 import msg from '../images/Web_Messaging_firbase.png'
 import ecart from '../images/react-ecart.png'
 import datastudio from '../images/datastudio.jpg'
+import brainwave from '../images/Brainwave Quiz Master.png'
 
 export const menu = [
     {
@@ -283,6 +284,18 @@ export const experiences = [
 
 
 export const projects = [
+    {
+        id: 3,
+        title: "Brainwave Quiz Master",
+        date: "June 2015 - Feb 2016",
+        description:
+            "My First Thesis Project wherein it is browser based that enables player competes each other with categories for easy, medium and hard. It is the most interesting game based on realtime functions where the players prompts the buzzer enables to answer the question with ranking up basis based on the questions answered.",
+        image: brainwave,
+        tags: ["PHP", "MVC", "OOP", "CSS", "MYSQL", "Materialized CSS"],
+        category: "web app",
+        github: "https://github.com/What-a-tops/brainwave",
+        webapp: ""
+    },
     {
         id: 9,
         title: "Fortress",
