@@ -24,23 +24,35 @@ const HeroBg = styled.div`
   position: absolute;
   display: flex;
   justify-content: end;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   width: 82%;
   height: 100%;
+  inset: 60% 0 0 52% !important;
   max-width: 1360px;
   overflow: hidden;
   padding: 0 30px;
-  top: 50%;
-  left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
+  @media screen and (max-width: 1300px) {
+    justify-content: center;
+    padding: 0 0;
+    inset: 65% 0 0 75% !important;
+  }
+
+  @media screen and (max-width: 1020px) {
+    justify-content: center;
+    padding: 0 0;
+    inset: 65% 0 0 75% !important;
+  }
+
   @media screen and (max-width: 960px) {
     justify-content: center;
-    padding: 0 0px;
+    padding: 0 0;
+    inset: 55% 0 0 50% !important;
+  }
+
+  @media screen and (max-width: 640px) {
+    inset: 55% 0 0 50% !important;
   }
 `;
 

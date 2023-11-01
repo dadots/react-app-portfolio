@@ -323,14 +323,14 @@ export const projects = [
     },
     {
         id: 10,
-        title: "Bagyo Odette Monitoring Dashboard",
+        title: "Bagyong Odette Monitoring Dashboard",
         date: "Jan 2021 - Mar 2021",
         description:
             "A dashboard that monitors the numbers of affected cell sites within Cebu. The purposes of this task is to identify the damages and possible restorations upon assessed onsite.",
         image: datastudio,
         tags: [
             "Data Studio",
-            "Spreedsheet",
+            "Spreadsheet",
             "MySQL",
             "Google Email Login"
         ],
