@@ -44,6 +44,7 @@ export const Bio = {
     name: "Darius Paul Bacate",
     roles: [
         "Full Stack Developer",
+        "Web Developer",
         // "UI/UX Designer",
         "Programmer",
     ],
@@ -289,7 +290,7 @@ export const projects = [
         title: "Brainwave Quiz Master",
         date: "June 2015 - Feb 2016",
         description:
-            "My First Thesis Project wherein it is browser based that enables player competes each other with categories for easy, medium and hard. It is the most interesting game based on realtime functions where the players prompts the buzzer enables to answer the question with ranking up basis based on the questions answered.",
+            "My Thesis Project wherein it is browser based game that enables player competes each other with categories for easy, medium and hard. It is the most interesting game based on realtime functions where the players prompts the buzzer enables to answer the question with ranking up basis based on the questions answered.",
         image: brainwave,
         tags: ["PHP", "MVC", "OOP", "CSS", "MYSQL", "Materialized CSS"],
         category: "web app",
@@ -384,16 +385,16 @@ export const projects = [
         webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
 
     },
-    {
-        id: 3,
-        title: "ECart",
-        date: "Dec 2021 - Apr 2022",
-        description:
-            "A simple ecommerce app that displays the products with actions of adding and removing by items.",
-        image: ecart,
-        tags: ["React", "Vite", "CSS", "ES6"],
-        category: "web app",
-        github: "https://github.com/What-a-tops/react-ecart",
-        webapp: "https://main--unique-biscochitos-97cf49.netlify.app/"
-    },
+    // {
+    //     id: 3,
+    //     title: "ECart",
+    //     date: "Dec 2021 - Apr 2022",
+    //     description:
+    //         "A simple ecommerce app that displays the products with actions of adding and removing by items.",
+    //     image: ecart,
+    //     tags: ["React", "Vite", "CSS", "ES6"],
+    //     category: "web app",
+    //     github: "https://github.com/What-a-tops/react-ecart",
+    //     webapp: "https://main--unique-biscochitos-97cf49.netlify.app/"
+    // },
 ];

@@ -3,6 +3,7 @@ import {FaBars} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import {Switch} from "@mui/material";
 import {menu} from "../../data/constants.js";
+import {BeakerIcon} from "@heroicons/react/20/solid/index.js";
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};
@@ -41,21 +42,42 @@ const NavLogo = styled.a`
   }
 `;
 const NavLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+   font-weight: 500;
+   cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
   text-decoration: none;
-  :hover {
+  color: ${({ theme }) => theme.text_primary};
+  padding: 20px 0px;
+  margin: 0 20px;
+  display: inline-block;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    background: -webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%);
+    border-radius: 6px;
+  }
+
+  &:hover::before {
+    bottom: 10px;
+    height: 3px;
+    opacity: 1;
+  }
+
+  &:hover {
     color: ${({ theme }) => theme.primary};
-    border-bottom: 1.5px solid ${({ theme }) => theme.primary};
-    line-height: 2.5;
+    transition: all 0.2s ease-in-out;
   }
   
   &.active {
     color: ${({ theme }) => theme.primary};
-    border-bottom: 1.5px solid ${({ theme }) => theme.primary};
-    line-height: 2.5;
   }
 `;
 const NavItems = styled.ul`
@@ -174,6 +196,7 @@ const Navbar = ({switchMode, mode}) => {
                                      onClick={() => setActiveNav(`#${tab.link}`)}
                                      className={activeNav === `#${tab.link}` ? 'active' : ''}
                             >
+                                {/*<BeakerIcon className="h-6 w-6 text-blue-500" />*/}
                                 {tab.name}
                             </NavLink>
                         ))
