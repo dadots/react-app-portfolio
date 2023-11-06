@@ -56,18 +56,17 @@ const NavLink = styled.a`
   &::before {
     content: "";
     position: absolute;
+    bottom: -1.5px;
+    height: 6px;
     width: 100%;
-    height: 0;
-    bottom: 0;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
     background: -webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%);
-    border-radius: 6px;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: all 0.2s linear;
   }
 
   &:hover::before {
-    bottom: 10px;
-    height: 3px;
+    transform: scaleX(1);
     opacity: 1;
   }
 
@@ -80,6 +79,7 @@ const NavLink = styled.a`
     color: ${({ theme }) => theme.primary};
   }
 `;
+
 const NavItems = styled.ul`
   width: 100%;
   display: flex;
