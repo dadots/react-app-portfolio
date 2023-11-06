@@ -57,7 +57,7 @@ const NavLink = styled.a`
     content: "";
     position: absolute;
     bottom: -1.5px;
-    height: 6px;
+    height: 4px;
     width: 100%;
     background: -webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%);
     border-radius: 50px;
