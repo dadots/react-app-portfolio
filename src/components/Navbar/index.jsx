@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import {FaBars} from "react-icons/fa";
 import {useEffect, useState} from "react";
 import {Switch} from "@mui/material";
-import {menu} from "../../data/constants.js";
-import {BeakerIcon} from "@heroicons/react/20/solid/index.js";
+import {menu} from "../../data/constants.jsx";
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};
@@ -42,16 +41,20 @@ const NavLogo = styled.a`
   }
 `;
 const NavLink = styled.a`
-   font-weight: 500;
-   cursor: pointer;
+  font-weight: 500;
+  cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: ${({ theme }) => theme.text_primary};
-  padding: 20px 0px;
+  padding: 20px 0;
   margin: 0 20px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
   position: relative;
+  gap: 8px;
+  width: 100%;
   
   &::before {
     content: "";
@@ -79,7 +82,6 @@ const NavLink = styled.a`
     color: ${({ theme }) => theme.primary};
   }
 `;
-
 const NavItems = styled.ul`
   width: 100%;
   display: flex;
@@ -93,7 +95,6 @@ const NavItems = styled.ul`
     display: none;
   }
 `;
-
 const ButtonContainer = styled.div`
   width: 80%;
   height: 100%;
@@ -105,14 +106,12 @@ const ButtonContainer = styled.div`
     display: none;
   }
 `;
-
 const Span = styled.div`
   color: ${({ theme }) => theme.primary};
   padding: 0 4px;
   font-weight: bold;
   font-size: 18px;
 `;
-
 const MobileIcon = styled.div`
     display: none;
     @media screen and (max-width: 768px) {
@@ -153,6 +152,10 @@ const MobileLink = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 10px;
   &:hover, &.active {
     color: ${({ theme }) => theme.primary};
   }
@@ -161,12 +164,12 @@ const MobileLink = styled.a`
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [activeNav, setActiveNav] = useState('#about')
+    const [activeNav, setActiveNav] = useState('#home')
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY >= 0 && window.scrollY < 660) {
-                setActiveNav('#about');
+                setActiveNav('#home');
             } else if (window.scrollY >= 660 && window.scrollY < 1700) {
                 setActiveNav('#skills');
             } else if (window.scrollY >= 1700 && window.scrollY < 3000) {
@@ -196,8 +199,7 @@ const Navbar = ({switchMode, mode}) => {
                                      onClick={() => setActiveNav(`#${tab.link}`)}
                                      className={activeNav === `#${tab.link}` ? 'active' : ''}
                             >
-                                {/*<BeakerIcon className="h-6 w-6 text-blue-500" />*/}
-                                {tab.name}
+                                {tab.icon} {tab.name}
                             </NavLink>
                         ))
                     }
@@ -233,7 +235,9 @@ const Navbar = ({switchMode, mode}) => {
                                         setActiveNav(`#${tab.link}`)
                                         setIsOpen(!isOpen)
 
-                                }}>{tab.name}</MobileLink>
+                                }}>
+                                    {tab.icon} {tab.name}
+                                </MobileLink>
                             ))
                         }
 

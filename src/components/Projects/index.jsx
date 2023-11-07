@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {projects} from "../../data/constants.js";
+import {projects} from "../../data/constants.jsx";
 import ProjectCard from "../Cards/ProjectCard.jsx";
 
 const Container = styled.div`

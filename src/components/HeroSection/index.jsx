@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Bio} from "../../data/constants.js";
+import {Bio} from "../../data/constants.jsx";
 import Typewriter from 'typewriter-effect';
 import HeroImg from '../../images/me.jpg'
 import HeroBgAnimation from "../HeroBgAnimation/index.jsx";
@@ -217,7 +217,7 @@ const Image = styled.img`
 
 const Hero = () => {
     return (
-        <div id="about">
+        <div id="home">
             <HeroContainer>
                 <HeroBg>
                     <HeroBgAnimation />

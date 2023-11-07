@@ -5,37 +5,42 @@ import fortress from '../images/fortress.jpg'
 import crud from '../images/react-crud-toolkit.png'
 import tenzies from '../images/tenzies.png'
 import msg from '../images/Web_Messaging_firbase.png'
-import ecart from '../images/react-ecart.png'
+// import ecart from '../images/react-ecart.png'
 import datastudio from '../images/datastudio.jpg'
 import brainwave from '../images/Brainwave Quiz Master.png'
+
+import HomeIcon from '@mui/icons-material/Home';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
+import BadgeIcon from '@mui/icons-material/Badge';
 
 export const menu = [
     {
         id: 1,
-        name: 'About',
-        link: 'about',
-        icon: 'circle-exclamation-solid.svg',
-        isActive: 'active'
+        name: 'Home',
+        link: 'home',
+        icon: <HomeIcon style={{fontSize: '20px'}} />,
+        isActive: 'active',
     },
     {
         id: 2,
         name: 'Skills',
         link: 'skills',
-        icon: 'lightbulb-regular.svg',
+        icon: <DesignServicesIcon style={{fontSize: '20px'}} />,
         isActive: 'active'
     },
     {
         id: 3,
         name: 'Experience',
         link: 'experience',
-        icon: 'suitcase-solid.svg',
+        icon: <BadgeIcon style={{fontSize: '20px'}} />,
         isActive: 'active'
     },
     {
         id: 4,
         name: 'Projects',
         link: 'projects',
-        icon: 'lightbulb-regular.svg',
+        icon: <HomeRepairServiceIcon style={{fontSize: '20px'}}/>,
         isActive: 'active'
     },
 ]
@@ -198,6 +203,7 @@ export const skills = [
     },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const experiences = [
     {
         id: 0,

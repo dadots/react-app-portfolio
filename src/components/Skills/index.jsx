@@ -1,4 +1,4 @@
-import {skills} from "../../data/constants.js";
+import {skills} from "../../data/constants.jsx";
 import styled from "styled-components";
 
 const Container = styled.div`

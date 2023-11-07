@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {experiences} from "../../data/constants.js";
+import {experiences} from "../../data/constants.jsx";
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
