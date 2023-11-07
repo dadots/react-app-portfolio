@@ -66,6 +66,7 @@ const NavLink = styled.a`
     border-radius: 50px;
     transform: scaleX(0);
     transition: all 0.2s linear;
+    left: 1%;
   }
 
   &:hover::before {
@@ -87,7 +88,6 @@ const NavItems = styled.ul`
   display: flex;
   align-items: center;
   justify-content:center;
-  gap: 32px;
   padding: 0 6px;
   list-style: none;
 

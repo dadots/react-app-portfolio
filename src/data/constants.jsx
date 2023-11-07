@@ -9,38 +9,38 @@ import msg from '../images/Web_Messaging_firbase.png'
 import datastudio from '../images/datastudio.jpg'
 import brainwave from '../images/Brainwave Quiz Master.png'
 
-import HomeIcon from '@mui/icons-material/Home';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
-import BadgeIcon from '@mui/icons-material/Badge';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import HomeRepairServiceOutlinedIcon from '@mui/icons-material/HomeRepairServiceOutlined';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 
 export const menu = [
     {
         id: 1,
         name: 'Home',
         link: 'home',
-        icon: <HomeIcon style={{fontSize: '20px'}} />,
+        icon: <HomeOutlinedIcon style={{fontSize: '20px'}} />,
         isActive: 'active',
     },
     {
         id: 2,
         name: 'Skills',
         link: 'skills',
-        icon: <DesignServicesIcon style={{fontSize: '20px'}} />,
+        icon: <PsychologyOutlinedIcon style={{fontSize: '20px'}} />,
         isActive: 'active'
     },
     {
         id: 3,
         name: 'Experience',
         link: 'experience',
-        icon: <BadgeIcon style={{fontSize: '20px'}} />,
+        icon: <ArticleOutlinedIcon style={{fontSize: '20px'}} />,
         isActive: 'active'
     },
     {
         id: 4,
         name: 'Projects',
         link: 'projects',
-        icon: <HomeRepairServiceIcon style={{fontSize: '20px'}}/>,
+        icon: <HomeRepairServiceOutlinedIcon style={{fontSize: '20px'}}/>,
         isActive: 'active'
     },
 ]
