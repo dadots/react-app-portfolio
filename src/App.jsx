@@ -67,8 +67,6 @@ const App = () => {
             </ThemeProvider>
             <ScrollTop />
         </div>
-
-
     )
 }
 

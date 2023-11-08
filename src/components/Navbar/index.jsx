@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import {FaBars} from "react-icons/fa";
 import {useEffect, useState} from "react";
-import {Switch} from "@mui/material";
 import {menu} from "../../data/constants.jsx";
+import CustomToggleSwitch from "./CustomToggleSwitch.jsx";
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};
@@ -205,22 +205,7 @@ const Navbar = ({switchMode, mode}) => {
                     }
                 </NavItems>
                 <ButtonContainer>
-                    <Switch
-                        color="success"
-                        defaultChecked
-                        onChange={() => switchMode(mode === false ? "dark" : "light")}
-                        sx={{
-                            "&.MuiSwitch-root .MuiSwitch-switchBase": {
-                                color: '#FFFFFF',
-                                borderStyle: 'solid'
-                            },
-
-                            "&.MuiSwitch-root .Mui-checked": {
-                                color: 'rgb(0, 223, 162)',
-                                borderStyle: 'solid'
-                            }
-                        }}
-                    />
+                    <CustomToggleSwitch switchMode={switchMode} mode={mode}  />
                 </ButtonContainer>
                 {
                     isOpen &&
@@ -240,20 +225,20 @@ const Navbar = ({switchMode, mode}) => {
                                 </MobileLink>
                             ))
                         }
+                        <CustomToggleSwitch switchMode={switchMode} mode={mode}  />
+                        {/*<Switch*/}
+                        {/*    sx={{*/}
+                        {/*        "&.MuiSwitch-root .MuiSwitch-switchBase": {*/}
+                        {/*            color: '#FFFFFF'*/}
+                        {/*        },*/}
 
-                        <Switch
-                            sx={{
-                                "&.MuiSwitch-root .MuiSwitch-switchBase": {
-                                    color: '#FFFFFF'
-                                },
-
-                                "&.MuiSwitch-root .Mui-checked": {
-                                    color: 'rgb(0, 223, 162)'
-                                }
-                            }}
-                            defaultChecked
-                            onChange={() => switchMode(mode === false ? "dark" : "light")}
-                        />
+                        {/*        "&.MuiSwitch-root .Mui-checked": {*/}
+                        {/*            color: 'rgb(0, 223, 162)'*/}
+                        {/*        }*/}
+                        {/*    }}*/}
+                        {/*    defaultChecked*/}
+                        {/*    onChange={() => switchMode(mode === false ? "dark" : "light")}*/}
+                        {/*/>*/}
                     </MobileMenu>
                 }
             </NavContainer>
