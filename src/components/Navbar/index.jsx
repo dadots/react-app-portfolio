@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {FaBars} from "react-icons/fa";
 import Hamburger from 'hamburger-react'
 import {useEffect, useState} from "react";
 import {menu} from "../../data/constants.jsx";
@@ -163,6 +164,7 @@ const MobileLink = styled.a`
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
+    // const [isOpen, setIsOpen] = useState(false);
     const [isOpen, setOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('#home')
 
@@ -187,7 +189,7 @@ const Navbar = ({switchMode, mode}) => {
                         <Span>DADOTS</Span>
                 </NavLogo>
                 <MobileIcon>
-                    <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
+                    <Hamburger toggled={isOpen} toggle={setOpen} size={20} style={{height: '38px !important'}}/>
                 </MobileIcon>
                 <NavItems>
                     {

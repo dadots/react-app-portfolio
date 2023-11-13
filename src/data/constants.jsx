@@ -146,6 +146,10 @@ export const skills = [
                 name: "NodeJS",
                 image: "https://nodejs.org/static/images/logo.svg",
             },
+            {
+                name: "JsonServer",
+                image: "https://spin.atomicobject.com/wp-content/uploads/json.png",
+            },
         ],
     },
     {
