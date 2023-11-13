@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {FaBars} from "react-icons/fa";
+import Hamburger from 'hamburger-react'
 import {useEffect, useState} from "react";
 import {menu} from "../../data/constants.jsx";
 import CustomToggleSwitch from "./CustomToggleSwitch.jsx";
@@ -163,7 +163,7 @@ const MobileLink = styled.a`
 
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('#home')
 
     useEffect(() => {
@@ -187,9 +187,7 @@ const Navbar = ({switchMode, mode}) => {
                         <Span>DADOTS</Span>
                 </NavLogo>
                 <MobileIcon>
-                    <FaBars onClick={() => {
-                        setIsOpen(!isOpen)
-                    }} />
+                    <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
                 </MobileIcon>
                 <NavItems>
                     {
@@ -218,7 +216,6 @@ const Navbar = ({switchMode, mode}) => {
                                     href={`#${tab.link}`}
                                     onClick={() => {
                                         setActiveNav(`#${tab.link}`)
-                                        setIsOpen(!isOpen)
 
                                 }}>
                                     {tab.icon} {tab.name}
@@ -226,19 +223,6 @@ const Navbar = ({switchMode, mode}) => {
                             ))
                         }
                         <CustomToggleSwitch switchMode={switchMode} mode={mode}  />
-                        {/*<Switch*/}
-                        {/*    sx={{*/}
-                        {/*        "&.MuiSwitch-root .MuiSwitch-switchBase": {*/}
-                        {/*            color: '#FFFFFF'*/}
-                        {/*        },*/}
-
-                        {/*        "&.MuiSwitch-root .Mui-checked": {*/}
-                        {/*            color: 'rgb(0, 223, 162)'*/}
-                        {/*        }*/}
-                        {/*    }}*/}
-                        {/*    defaultChecked*/}
-                        {/*    onChange={() => switchMode(mode === false ? "dark" : "light")}*/}
-                        {/*/>*/}
                     </MobileMenu>
                 }
             </NavContainer>
