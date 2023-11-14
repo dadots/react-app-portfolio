@@ -35,6 +35,14 @@ body{
   border-radius: 6px;
 }
 
-/*svg {*/
-/*  height: 20px !important;*/
-/*}*/
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: .5%;
+  background: -webkit-linear-gradient(225deg, rgb(0, 223, 162) 0%, rgb(1, 106, 112) 100%);
+  transform-origin: 0;
+  border-radius: 6px;
+  z-index: 10;
+}

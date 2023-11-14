@@ -78,7 +78,7 @@ const Experience = () => {
                                 <TimelineItem key={index}>
                                     <TimelineSeparator>
                                         <TimelineDot variant="outlined" sx={{borderColor: '#00DFA2'}}/>
-                                        {index !== experiences.length - 1 && <TimelineConnector sx={{ background: '-webkit-linear-gradient(225deg, rgb(1, 106, 112) 0%, rgb(0, 223, 162) 100%)' }} />}
+                                        {index !== experiences.length - 1 && <TimelineConnector sx={{ background: '-webkit-linear-gradient(225deg, rgb(0, 223, 162) 0%, rgb(1, 106, 112) 100%)' }} />}
                                     </TimelineSeparator>
                                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                                         <ExperienceCards experience={experience} />

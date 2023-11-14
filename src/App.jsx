@@ -11,6 +11,7 @@ import Projects from "./components/Projects/index.jsx";
 import ProjectDetails from "./components/Projects/ProjectDetails/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import ScrollTop from "./components/ScrollTop/ScrollTop.jsx";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -39,6 +40,13 @@ const App = () => {
         setMode(mood);
     }
 
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
     const [mode, setMode] = useState(true);
     const [openModal, setOpenModal] = useState({ state: false, project: null });
     return (
@@ -49,6 +57,7 @@ const App = () => {
                         switchMode={switchMode}
                         mode={mode}
                     />
+                    <motion.div className="progress-bar" style={{ scaleX }} />
                     <Body>
                         <Hero />
                         <Wrapper >
