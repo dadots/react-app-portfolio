@@ -189,7 +189,7 @@ const Navbar = ({switchMode, mode}) => {
                         <Span>DADOTS</Span>
                 </NavLogo>
                 <MobileIcon>
-                    <Hamburger toggled={isOpen} toggle={setOpen} size={20} style={{height: '38px !important', transform: 'none'}}/>
+                    <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
                 </MobileIcon>
                 <NavItems>
                     {
