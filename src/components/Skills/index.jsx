@@ -31,6 +31,7 @@ const Title = styled.h1`
     font-weight: 600;
     margin-top: 5.5rem;
     color: ${({ theme }) => theme.text_primary};
+    text-transform: uppercase;
     @media (max-width: 768px) {
           margin-top: 5.5rem;
           font-size: 32px;
@@ -107,6 +108,10 @@ const SkillItem = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  &:hover{
+    border: 1px solid ${({ theme }) => theme.primary};
+    transition: 0.8s all ease;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;

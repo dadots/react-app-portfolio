@@ -38,6 +38,7 @@ export const Title = styled.h1`
     font-weight: 600;
     margin-top: 5.5rem;
     color: ${({ theme }) => theme.text_primary};
+    text-transform: uppercase;
     @media (max-width: 768px) {
           margin-top: 5.5rem;
           font-size: 32px;
