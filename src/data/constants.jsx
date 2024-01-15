@@ -5,6 +5,7 @@ import fortress from '../images/fortress.jpg'
 import crud from '../images/react-crud-toolkit.png'
 import tenzies from '../images/tenzies.png'
 import msg from '../images/Web_Messaging_firbase.png'
+import darbot from '../images/darbot.png'
 // import ecart from '../images/react-ecart.png'
 import datastudio from '../images/datastudio.jpg'
 import brainwave from '../images/Brainwave Quiz Master.png'
@@ -402,6 +403,18 @@ export const projects = [
         github: "https://github.com/What-a-tops/react-firebase-chat",
         webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
 
+    },
+    {
+        id: 3,
+        title: "DarBot",
+        date: "Jan 2023",
+        description:
+            "A simple Chatbot created in vite - react support by the library of React-Chatbot-Kit.",
+        image: darbot,
+        tags: ["React", "Vite", "CSS", "ES6", "React Chabot-Kit"],
+        category: "web app",
+        github: "https://github.com/What-a-tops/darbot",
+        webapp: "https://precious-cassata-8d3fdb.netlify.app/"
     },
     // {
     //     id: 3,
