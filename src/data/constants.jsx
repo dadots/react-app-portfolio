@@ -58,7 +58,7 @@ export const Bio = {
         "A motivated and versatile individual, always eager to take on new challenges. With a passion for learning and dedicating to deliver high-quality results. A positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
     github: "https://github.com/What-a-tops",
     resume:
-        "https://drive.google.com/file/d/1pewvmAXAK4bnniqh1iNSlRyjcxDDCQiB/view?usp=sharing",
+        "https://drive.google.com/file/d/1WE964I4tK827KtXLR-bKbGGm4roLVo5Q/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/darius-paul-bacate-03805813a/",
     facebook: "https://www.facebook.com/iezbay",
 };
