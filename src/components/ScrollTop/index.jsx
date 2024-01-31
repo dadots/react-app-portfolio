@@ -34,7 +34,6 @@ const ScrollTop = () => {
   const [scrollTop, setScrollTop] = useState(false)
   useEffect(() => {
         window.addEventListener("scroll", () => {
-            console.log(window.scrollY)
             if (window.scrollY > 560) {
                 setScrollTop(true)
             } else {

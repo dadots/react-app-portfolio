@@ -30,7 +30,7 @@ const NavContainer = styled.div`
   padding: 0 24px;
   max-width: 1200px;
 `;
-const NavLogo = styled.a`
+const NavLogo = styled.div`
   width: 80%;
   padding: 0 6px;
   display: flex;

@@ -55,11 +55,11 @@ const App = () => {
 
     return (
         <div className="App">
-            <Suspense
+            {/* <Suspense
                 fallback={
                     <Loader />
                 }
-            >
+            > */}
                 <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                     <Router>
                         <Navbar
@@ -84,7 +84,7 @@ const App = () => {
                     </Router>
                 </ThemeProvider>
                 <ScrollTop />
-            </Suspense>
+            {/* </Suspense> */}
         </div>
     )
 }

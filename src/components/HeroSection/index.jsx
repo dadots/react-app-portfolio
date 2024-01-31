@@ -245,7 +245,7 @@ const Hero = () => {
                         </ResumeButton>
                     </HeroLeftContainer>
                     <HeroRightContainer id="right">
-                        <Image src={HeroImg} alt="hero-image" />
+                        <Image src={HeroImg} alt={HeroImg} />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

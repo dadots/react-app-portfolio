@@ -140,7 +140,7 @@ const ExperienceCards = ({experience}) => {
     return (
       <Card>
           <Top>
-              <Logo src={experience.img} />
+              <Logo alt={experience.img} src={experience.img} />
               <Body>
                   <Role>{experience.role}</Role>
                   <Company>{experience.company}</Company>
@@ -166,7 +166,7 @@ const ExperienceCards = ({experience}) => {
             </Description>
           {
               experience.doc &&
-              <a href={experience.doc} target="new">
+              <a href={experience.doc} aria-label="certificates" rel="noopener" target="new">
                   <Document src={experience.doc} />
               </a>
           }
