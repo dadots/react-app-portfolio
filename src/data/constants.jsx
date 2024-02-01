@@ -1,14 +1,14 @@
-import orange_apps from '../images/Orange Apps.jpg'
-import paydro from '../images/Paydro.jpg'
-import globe_awards from '../images/globe-awards.jpg'
-import fortress from '../images/fortress.jpg'
-import crud from '../images/react-crud-toolkit.png'
-import tenzies from '../images/tenzies.png'
-import msg from '../images/Web_Messaging_firbase.png'
+import orange_apps from '../images/orange-apps.webp'
+import paydro from '../images/paydro.webp'
+import globe_awards from '../images/globe-awards.webp'
+import fortress from '../images/fortress.webp'
+import crud from '../images/react-crud-toolkit.webp'
+import tenzies from '../images/tenzies.webp'
+import msg from '../images/web-messaging-firebase.webp'
 import darbot from '../images/darbot.png'
 // import ecart from '../images/react-ecart.png'
-import datastudio from '../images/datastudio.jpg'
-import brainwave from '../images/Brainwave Quiz Master.png'
+import datastudio from '../images/datastudio.webp'
+import brainwave from '../images/Brainwave Quiz Master.webp'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
@@ -88,7 +88,7 @@ export const Bio = {
         "Programmer",
     ],
     description:
-        "A motivated and versatile individual, always eager to take on new challenges. With a passion for learning and dedicating to deliver high-quality results. A positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+        "A motivated and versatile individual, always eager to take on new challenges. With a passion for learning and dedicating to deliver high-quality results. A positive attitude and a growth mindset, Always to make a meaningful contribution and achieve great things.",
     github: "https://github.com/What-a-tops",
     resume:
         "https://drive.google.com/file/d/1WE964I4tK827KtXLR-bKbGGm4roLVo5Q/view?usp=sharing",

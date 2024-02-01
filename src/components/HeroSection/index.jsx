@@ -1,7 +1,8 @@
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import {Bio} from "../../data/constants.jsx";
 import Typewriter from 'typewriter-effect';
-import HeroImg from '../../images/me.jpg'
+import HeroImg from '../../images/me.webp'
 import HeroBgAnimation from "../HeroBgAnimation/index.jsx";
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -205,8 +206,8 @@ const Image = styled.img`
   border: 2px solid ${({ theme }) => theme.primary};
   
   @media screen and (max-width: 960px) {
-    max-height: 400px;
-    max-width: 400px;
+    max-height: 350px;
+    max-width: 350px;
   }
 
   @media screen and (max-width: 640px) {
@@ -245,7 +246,7 @@ const Hero = () => {
                         </ResumeButton>
                     </HeroLeftContainer>
                     <HeroRightContainer id="right">
-                        <Image src={HeroImg} alt={HeroImg} />
+                          <Image fetchpriority="high" src={HeroImg} alt={HeroImg} />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>
