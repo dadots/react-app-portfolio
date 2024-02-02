@@ -1,4 +1,4 @@
-import{s as t,j as i}from"./index-16b227ac.js";const d=t.img`
+import{s as t,j as i}from"./index-f9c6912d.js";const d=t.img`
   display: none;
   height: 70px;
   width: fit-content;

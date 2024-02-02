@@ -1,1 +1,0 @@
-import{r as t}from"./index-16b227ac.js";import{q as o}from"./createSvgIcon-4d8038f9.js";const r=t.createContext({}),s=r;function a(e){return e==="alternate-reverse"?"positionAlternateReverse":`position${o(e)}`}export{s as T,a as c};
