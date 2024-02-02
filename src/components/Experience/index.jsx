@@ -1,12 +1,13 @@
+import React from 'react';
 import styled from 'styled-components'
-import {experiences} from "../../data/constants.jsx";
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import ExperienceCards from "../Cards/ExperienceCards.jsx";
+const ExperienceCards = React.lazy(() => import('../Cards/ExperienceCards.jsx'));
+const Timeline = React.lazy(() => import('@mui/lab/Timeline'));
+const TimelineItem = React.lazy(() => import('@mui/lab/TimelineItem'));
+const TimelineSeparator = React.lazy(() => import('@mui/lab/TimelineSeparator'));
+const TimelineConnector = React.lazy(() => import('@mui/lab/TimelineConnector'));
+const TimelineContent = React.lazy(() => import('@mui/lab/TimelineContent'));
+const TimelineDot = React.lazy(() => import('@mui/lab/TimelineDot'));
+import { experiences } from "../../data/constants.jsx";
 
 const Container = styled.div`
     display: flex;

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import {FaBars} from "react-icons/fa";
-import Hamburger from 'hamburger-react'
-import {useEffect, useState} from "react";
-import {menu} from "../../data/constants.jsx";
-import CustomToggleSwitch from "./CustomToggleSwitch.jsx";
+import React, {useEffect, useState} from "react";
+import { menu } from "../../data/constants.jsx";
+const Hamburger = React.lazy(() => import('hamburger-react'));
+const CustomToggleSwitch = React.lazy(() => import('./CustomToggleSwitch.jsx'));
 
 const Nav = styled.div`
   background-color: ${({theme}) => theme.card_light};

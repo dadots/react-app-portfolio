@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from "styled-components";
-import {projects} from "../../data/constants.jsx";
-import ProjectCard from "../Cards/ProjectCard.jsx";
+import { projects } from "../../data/constants.jsx";
+const ProjectCard = React.lazy(() => import('../Cards/ProjectCard.jsx'));
 
 const Container = styled.div`
     display: flex;

@@ -5,15 +5,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from './utils/Themes.js'
 
-import Navbar from "./components/Navbar/index";
-import Hero from "./components/HeroSection/index";
-import Skills from "./components/Skills/index";
-import Experience from "./components/Experience/index";
-import Projects from "./components/Projects/index";
-import ProjectDetails from "./components/Projects/ProjectDetails/index";
-import Footer from "./components/Footer/index";
-import ScrollTop from "./components/ScrollTop/index";
-import Loader from "./components/Loader/index"
+const Navbar = React.lazy(() => import('./components/Navbar/index'));
+const Hero = React.lazy(() => import('./components/HeroSection/index'));
+const Projects = React.lazy(() => import('./components/Projects/index'));
+const Experience = React.lazy(() => import('./components/Experience/index'));
+const Skills = React.lazy(() => import('./components/Skills/index'));
+const ProjectDetails = React.lazy(() => import('./components/Projects/ProjectDetails/index'));
+const Footer = React.lazy(() => import('./components/Footer/index'));
+const ScrollTop = React.lazy(() => import('./components/ScrollTop/index'));
+const Loader = React.lazy(() => import('./components/Loader/index'));
 
 import { motion, useScroll, useSpring } from "framer-motion";
 

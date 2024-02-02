@@ -1,8 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
-import { Bio } from '../../data/constants.jsx';
+const Bio = React.lazy(() => import('../../data/constants.jsx'));
 
 const FooterContainer = styled.div`
   width: 100%;
