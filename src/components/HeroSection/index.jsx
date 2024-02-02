@@ -1,10 +1,9 @@
 
 import React from 'react';
 import styled from 'styled-components'
+import { Bio } from "../../data/constants.jsx";
 import Typewriter from 'typewriter-effect';
 import HeroImg from '../../images/me.webp'
-
-const Bio = React.lazy(() => import('../../data/constants.jsx'));
 const HeroBgAnimation = React.lazy(() => import('../HeroBgAnimation/index.jsx'));
 
 const HeroContainer = styled.div`
