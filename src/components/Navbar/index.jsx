@@ -188,7 +188,7 @@ const Navbar = ({switchMode, mode}) => {
                         <Span>DADOTS</Span>
                 </NavLogo>
                 <MobileIcon>
-                    <Hamburger toggled={isOpen} toggle={setOpen} size={20}/>
+                    <Hamburger aria-label='toggle' toggled={isOpen} toggle={setOpen} size={20}/>
                 </MobileIcon>
                 <NavItems>
                     {
@@ -197,6 +197,7 @@ const Navbar = ({switchMode, mode}) => {
                                      href={`#${tab.link}`}
                                      onClick={() => setActiveNav(`#${tab.link}`)}
                                      className={activeNav === `#${tab.link}` ? 'active' : ''}
+                                     aria-label={tab.link}
                             >
                                 {tab.icon} {tab.name}
                             </NavLink>
@@ -204,7 +205,7 @@ const Navbar = ({switchMode, mode}) => {
                     }
                 </NavItems>
                 <ButtonContainer>
-                    <CustomToggleSwitch switchMode={switchMode} mode={mode}  />
+                    <CustomToggleSwitch aria-label={switchMode} switchMode={switchMode} mode={mode}  />
                 </ButtonContainer>
                 {
                     isOpen &&
@@ -223,7 +224,7 @@ const Navbar = ({switchMode, mode}) => {
                                 </MobileLink>
                             ))
                         }
-                        <CustomToggleSwitch switchMode={switchMode} mode={mode}  />
+                        <CustomToggleSwitch aria-label={switchMode} switchMode={switchMode} mode={mode}  />
                     </MobileMenu>
                 }
             </NavContainer>

@@ -4,13 +4,13 @@ import { useState } from "react";
 import { BrowserRouter as Router } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme } from './utils/Themes.js'
+import ProjectDetails from './components/Projects/ProjectDetails/index'
 
 const Navbar = React.lazy(() => import('./components/Navbar/index'));
 const Hero = React.lazy(() => import('./components/HeroSection/index'));
 const Projects = React.lazy(() => import('./components/Projects/index'));
 const Experience = React.lazy(() => import('./components/Experience/index'));
 const Skills = React.lazy(() => import('./components/Skills/index'));
-const ProjectDetails = React.lazy(() => import('./components/Projects/ProjectDetails/index'));
 const Footer = React.lazy(() => import('./components/Footer/index'));
 const ScrollTop = React.lazy(() => import('./components/ScrollTop/index'));
 const Loader = React.lazy(() => import('./components/Loader/index'));
