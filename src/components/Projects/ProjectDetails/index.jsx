@@ -1,27 +1,24 @@
 import { CloseRounded } from '@mui/icons-material';
 import { Modal } from '@mui/material';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: center;
-    overflow-y: scroll;
-    transition: all 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 `;
 
 const Wrapper = styled.div`
     max-width: 800px;
     width: 100%;
     border-radius: 16px;
-    margin: 50px 12px;
-    height: min-content;
     background-color: ${({ theme }) => theme.card};
     color: ${({ theme }) => theme.text_primary};
     padding: 20px;
@@ -30,44 +27,57 @@ const Wrapper = styled.div`
     position: relative;
 `;
 
-const Title = styled.div`
-  font-size: 28px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  margin: 8px 6px 0px 6px;
-  @media only screen and (max-width: 600px) {
-      font-size: 24px;
-      margin: 6px 6px 0px 6px;
-  }
-`;
-
-const Date = styled.div`
-    font-size: 16px;
-    margin: 2px 6px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
-
-const Desc = styled.div`
-    font-size: 16px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary};
-    margin: 8px 6px;
-    @media only screen and (max-width: 600px) {
-        font-size: 14px;
-        margin: 6px 6px;
-    }
+const CloseButton = styled.div`
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
 `;
 
 const Image = styled.img`
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 300px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+`;
+
+const Title = styled.div`
+    font-size: 28px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_primary};
+    margin-bottom: 10px;
+`;
+
+const Button = styled.a`
     width: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_primary};
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: ${({ theme }) => theme.primary};
+    ${({ dull, theme }) => dull && `
+        background-color: ${theme.bgLight};
+        color: ${theme.text_secondary};
+        &:hover {
+            background-color: ${({ theme }) => theme.bg + 99};
+        }
+    `}
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: ${({ theme }) => theme.primary + 99};
+        border: none;
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 12px;
+    }
 `;
 
 const Tags = styled.div`
@@ -92,6 +102,27 @@ const Tag = styled.div`
     }
 `;
 
+const Date = styled.div`
+    font-size: 16px;
+    margin: 2px 6px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_secondary};
+    @media only screen and (max-width: 768px){
+        font-size: 12px;
+    }
+`
+
+const Desc = styled.div`
+    font-size: 16px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_primary};
+    margin: 8px 6px;
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
+        margin: 6px 6px;
+    }
+`;
+
 const ButtonGroup = styled.div`
     display: flex;
     justify-content: flex-end;
@@ -99,49 +130,17 @@ const ButtonGroup = styled.div`
     gap: 12px;
 `;
 
-const Button = styled.a`
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
-    padding: 12px 16px;
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary};
-    ${({ dull, theme }) => dull && `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
-        }
-    `}
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
-    }
-    @media only screen and (max-width: 600px) {
-        font-size: 12px;
-    }
-`;
+const ProjectDetails = ({ openModal, setOpenModal }) => {
+    const project = openModal?.project.project;
 
-const index = ({ openModal, setOpenModal }) => {
-    const project = openModal?.project;
     return (
-        <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
+        <Modal open={true} >
             <Container>
                 <Wrapper>
-                    <CloseRounded
-                        style={{
-                            position: "absolute",
-                            top: "10px",
-                            right: "20px",
-                            cursor: "pointer",
-                        }}
-                        onClick={() => setOpenModal({ state: false, project: null })}
-                    />
-                    <Image alt={project?.image} src={project?.image} />
+                    <CloseButton>
+                        <CloseRounded onClick={setOpenModal} />
+                    </CloseButton>
+                    <Image src={project?.image} alt={project?.title} />
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Tags>
@@ -159,14 +158,14 @@ const index = ({ openModal, setOpenModal }) => {
 
                         {
                             project?.webapp !== "" && (
-                                <Button href={project?.webapp} target='new'>View Live App</Button>
+                                <Button dull href={project?.webapp} target='new'>View Live App</Button>
                             )
                         }
                     </ButtonGroup>
                 </Wrapper>
             </Container>
         </Modal>
-    )
-}
+    );
+};
 
-export default index
+export default ProjectDetails;
