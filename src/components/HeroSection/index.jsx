@@ -250,7 +250,18 @@ const Hero = () => {
                         </ResumeButton>
                     </HeroLeftContainer>
                     <HeroRightContainer id="right">
-                          <Image fetchpriority="high" src={HeroImg} alt={HeroImg} loading="lazy" />
+                        <Image
+                            fetchpriority="high"
+                            src={HeroImg}
+                            alt="Me"
+                            loading="lazy"
+                            srcSet={`
+                              ${HeroImg} 400w,
+                              ${HeroImg} 600w,
+                              ${HeroImg} 1024w
+                            `}
+                            sizes="(max-width: 400px) 400px, (max-width: 1024px) 600px, 1024px"
+                        />
                     </HeroRightContainer>
                 </HeroInnerContainer>
             </HeroContainer>

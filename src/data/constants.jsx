@@ -1,14 +1,14 @@
-import orange_apps from '../images/orange-apps.webp'
-import paydro from '../images/paydro.webp'
-import globe_awards from '../images/globe-awards.webp'
-import fortress from '../images/fortress.webp'
-import crud from '../images/react-crud-toolkit.webp'
-import tenzies from '../images/tenzies.webp'
-import msg from '../images/web-messaging-firebase.webp'
-import darbot from '../images/darbot.png'
+import orange_apps from '../images/work/orange-apps.webp'
+import paydro from '../images/work/paydro.webp'
+import globe_awards from '../images/work/globe-awards.webp'
+import fortress from '../images/projects/fortress.webp'
+import crud from '../images/projects/react-crud-toolkit.webp'
+import tenzies from '../images/projects/tenzies.webp'
+import msg from '../images/projects/web-messaging-firebase.webp'
+import darbot from '../images/projects/darbot.png'
 // import ecart from '../images/react-ecart.png'
-import datastudio from '../images/datastudio.webp'
-import brainwave from '../images/Brainwave Quiz Master.webp'
+import datastudio from '../images/projects/datastudio.webp'
+import brainwave from '../images/projects/Brainwave Quiz Master.webp'
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
@@ -47,6 +47,9 @@ import trello_svg from '../Images/icons/trello-color-svgrepo-com.svg'
 import slack_svg from '../Images/icons/slack-svgrepo-com.svg'
 import ds_svg from '../Images/icons/google-data-studio.svg'
 
+import acn from '../Images/work/acn.webp'
+import globe from '../Images/work/globe.png'
+import oa from '../Images/work/oa.png'
 // eslint-disable-next-line react-refresh/only-export-components
 export const menu = [
     {
@@ -84,7 +87,6 @@ export const Bio = {
     roles: [
         "Full Stack Developer",
         "Web Developer",
-        // "UI/UX Designer",
         "Programmer",
     ],
     description:
@@ -239,7 +241,7 @@ export const skills = [
 export const experiences = [
     {
         id: 0,
-        img: "https://dynamicmedia.accenture.com/is/image/accenture/accenture-logo-768x768?qlt=85&wid=1200&ts=1689116843273&$auto-png-alpha$&fit=constrain&dpr=off",
+        img: acn,
         role: "Full-Stack Developer",
         company: "Accenture Inc.",
         date: "Nov 2022 - Present",
@@ -260,7 +262,7 @@ export const experiences = [
     },
     {
         id: 0,
-        img: "https://e7.pngegg.com/pngimages/66/112/png-clipart-globe-telecom-other-telecommunications-cebu-mobile-phones-globe-telecoms-logo-globe-text.png",
+        img: globe,
         role: "Full-Stack Developer",
         company: "Globe Telecom Inc.",
         date: "September 2019 - November 2022",
@@ -283,7 +285,7 @@ export const experiences = [
     },
     {
         id: 1,
-        img: "data:image/png;base64,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",
+        img: oa,
         role: "Mobile Developer (IOS)",
         company: "OVP Technologies Inc.",
         date: "March 2019 - June 2019",
@@ -298,7 +300,7 @@ export const experiences = [
     },
     {
         id: 2,
-        img: "data:image/png;base64,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",
+        img: oa,
         role: "Web Developer ",
         company: "Orange Apps Inc.",
         date: "November 2016 - March 2019",
@@ -426,7 +428,7 @@ export const projects = [
     {
         id: 3,
         title: "DarBot",
-        date: "Jan 2023",
+        date: "Jan 2024",
         description:
             "A simple Chatbot created in vite - react support by the library of React-Chatbot-Kit.",
         image: darbot,
