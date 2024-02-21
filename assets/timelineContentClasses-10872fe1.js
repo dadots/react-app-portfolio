@@ -1,1 +1,0 @@
-import{k as e,l as i}from"./createSvgIcon-b4238b6c.js";function o(t){return e("MuiTimelineContent",t)}const n=i("MuiTimelineContent",["root","positionLeft","positionRight","positionAlternate","positionAlternateReverse"]),l=n;export{o as g,l as t};
