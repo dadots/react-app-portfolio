@@ -1,9 +1,5 @@
-import styled from "styled-components";
+import { Div } from "../../utils/Hero.js"
 
-const Div = styled.div`
-    width:600px;
-    height: 500px;
-`
 const HeroBgAnimation = () => (
     <Div>
         <svg
