@@ -13,7 +13,7 @@ import {
     Date,
     Desc,
     ButtonGroup
-} from "../../utils/Project/Project.js"
+} from "../../../utils/Project/Project.js"
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
     const project = openModal?.project.project;
