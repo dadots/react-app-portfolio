@@ -14,7 +14,7 @@ const Skills = React.lazy(() => import('./components/Skills/index'));
 const Footer = React.lazy(() => import('./components/Footer/index'));
 const ScrollTop = React.lazy(() => import('./components/ScrollTop/index'));
 const Loader = React.lazy(() => import('./components/Loader/index'));
-const ProjectDetails = React.lazy(() => import('./components/Projects/ProjectDetails/index'));
+import ProjectDetails from './components/Projects/ProjectDetails/index'
 
 const Body = styled.div`
     background-color: ${({ theme }) => theme.bg};
@@ -82,31 +82,31 @@ const App = () => {
 
     return (
         <div className="App">
-            <Suspense fallback={<Loader />}>
+
                 <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                     <Router>
-                        <Suspense fallback={null}>
+                        {loading ? (
+                            <Loader />
+                        ) : (
+                            <>
                             <Navbar switchMode={switchMode} mode={mode} />
                             <motion.div ref={progressRef} className="progress-bar" style={{ width: '0%' }} />
                             <Body>
-                                <Suspense fallback={<Loader />}>
-                                    <Hero />
-                                    <Wrapper>
-                                        <Skills />
-                                        <Experience />
-                                    </Wrapper>
-                                    <Projects openModal={openModal} setOpenModal={handleOpenModal} />
-                                    <Footer />
-                                    {openModal.state && <ProjectDetails openModal={openModal} setOpenModal={handleCloseModal} />}
-                                </Suspense>
+                                <Hero />
+                                <Wrapper>
+                                    <Skills />
+                                    <Experience />
+                                </Wrapper>
+                                <Projects openModal={openModal} setOpenModal={handleOpenModal} />
+                                <Footer />
+                                {openModal.state && <ProjectDetails openModal={openModal} setOpenModal={handleCloseModal} />}
                             </Body>
-                        </Suspense>
-                        <Suspense fallback={<Loader />}>
                             <ScrollTop />
-                        </Suspense>
+                            </>
+                        )}
                     </Router>
                 </ThemeProvider>
-            </Suspense>
+
         </div>
     );
 };

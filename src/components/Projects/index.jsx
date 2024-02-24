@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { projects } from "../../data/constants.jsx";
 import { Title, Desc, Container, Wrapper } from "../../utils/Themes.js"
 
-const ProjectCard = React.lazy(() => import('../Cards/ProjectCard.jsx'));
+// const ProjectCard = React.lazy(() => import('../Cards/ProjectCard.jsx'));
+import ProjectCard from '../Cards/ProjectCard.jsx'
 
 import { CardContainer } from "../../utils/Project/Project.js"
 
