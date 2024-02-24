@@ -1,0 +1,1 @@
+import{B as e,y as i}from"./index-1710d65c.js";function o(t){return e("MuiTimelineContent",t)}const n=i("MuiTimelineContent",["root","positionLeft","positionRight","positionAlternate","positionAlternateReverse"]),l=n;export{o as g,l as t};
