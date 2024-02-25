@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     compression(),
-    compression({ algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/], deleteOriginalAssets: true })
   ],
   build: {
     minify: 'terser', // Specify to use Terser for minification
