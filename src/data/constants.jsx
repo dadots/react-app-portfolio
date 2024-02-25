@@ -90,7 +90,7 @@ export const Bio = {
         "Programmer",
     ],
     description:
-        "I am a motivated and versatile individual, always eager to take on new challenges. I have a positive attitude and a growth mindset, which makes me excited to learn new things and achieve great results.",
+        "Eager and flexible, always up for new challenges. With a positive mindset and a thirst for growth, Always excited to learn and excel.",
     github: "https://github.com/What-a-tops",
     resume:
         "https://drive.google.com/file/d/1WE964I4tK827KtXLR-bKbGGm4roLVo5Q/view?usp=sharing",
