@@ -14,7 +14,6 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
 import HomeRepairServiceOutlinedIcon from '@mui/icons-material/HomeRepairServiceOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
-
 import react_svg from '../Images/icons/react-svgrepo-com.svg'
 import vite_svg from '../Images/icons/vite-svgrepo-com.svg'
 import rt_svg from '../Images/icons/redux-svgrepo-com.svg'
@@ -50,6 +49,9 @@ import ds_svg from '../Images/icons/google-data-studio.svg'
 import acn from '../Images/work/acn.webp'
 import globe from '../Images/work/globe.png'
 import oa from '../Images/work/oa.png'
+
+import me from '../Images/me.webp'
+
 // eslint-disable-next-line react-refresh/only-export-components
 export const menu = [
     {
@@ -84,6 +86,7 @@ export const menu = [
 
 export const Bio = {
     name: "Darius Paul Bacate",
+    picture: me,
     roles: [
         "Full Stack Developer",
         "Web Developer",

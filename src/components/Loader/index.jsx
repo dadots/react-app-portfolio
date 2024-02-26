@@ -1,19 +1,29 @@
 import React from 'react'
-import PulseLoader from "react-spinners/PulseLoader"
-import { Loader, LoaderContent } from "../../utils/Loader.js"
+import './loader.css'
 
 const index = () => {
     return (
-        <Loader>
-            <LoaderContent>
-                <PulseLoader 
-                    color='#0f766e'
-                    margin={18}
-                    size={15}
-                    speedMultiplier={1}
-                />
-            </LoaderContent>
-        </Loader>
+        <>
+            <div className='body'>
+                  <span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                <div className='base'>
+                    <span></span>
+                    <div className='face'></div>
+                </div>
+            </div>
+            <div className='longfazers'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>Loading...</h1>
+        </>
     )
 }
 
