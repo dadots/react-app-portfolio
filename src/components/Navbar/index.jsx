@@ -23,15 +23,16 @@ const Navbar = ({switchMode, mode}) => {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if (window.scrollY >= 0 && window.scrollY < 660) {
+            if (window.scrollY >= 0 && window.scrollY < 650) {
                 setActiveNav('#home');
-            } else if (window.scrollY >= 660 && window.scrollY < 1700) {
+            } else if (window.scrollY >= 650 && window.scrollY < 1600) {
                 setActiveNav('#skills');
-            } else if (window.scrollY >= 1700 && window.scrollY < 3000) {
+            } else if (window.scrollY >= 1600 && window.scrollY < 2900) {
                 setActiveNav('#experience');
-            } else if (window.scrollY >= 3000) {
+            } else if (window.scrollY >= 2900) {
                 setActiveNav('#projects');
             }
+            console.log(window.scrollY)
         })
     }, [])
 

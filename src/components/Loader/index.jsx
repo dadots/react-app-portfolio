@@ -22,7 +22,7 @@ const index = () => {
                 <span></span>
                 <span></span>
             </div>
-            <h1>Loading...</h1>
+            <h1 className="loader">Loading...</h1>
         </>
     )
 }
