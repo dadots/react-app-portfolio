@@ -82,7 +82,6 @@ const App = () => {
 
     return (
         <div className="App">
-
                 <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                     <Router>
                         {loading ? (
@@ -106,7 +105,6 @@ const App = () => {
                         )}
                     </Router>
                 </ThemeProvider>
-
         </div>
     );
 };
