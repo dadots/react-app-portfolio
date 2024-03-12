@@ -17,7 +17,6 @@ import {
 } from "../../utils/Navbar/Navbar.js"
 // eslint-disable-next-line react/prop-types
 const Navbar = ({switchMode, mode}) => {
-    // const [isOpen, setIsOpen] = useState(false);
     const [isOpen, setOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('#home')
 
@@ -32,7 +31,6 @@ const Navbar = ({switchMode, mode}) => {
             } else if (window.scrollY >= 2900) {
                 setActiveNav('#projects');
             }
-            console.log(window.scrollY)
         })
     }, [])
 

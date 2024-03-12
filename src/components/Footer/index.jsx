@@ -26,7 +26,7 @@ function Footer() {
                     <SocialMediaIcon href={Bio.linkedin} aria-label="Linkin" rel="noopener" target="display" ><LinkedInIcon /></SocialMediaIcon>
                 </SocialMediaIcons>
                 <Copyright>
-                    &copy; 2023 Darius Paul Bacate. All rights reserved.
+                    &copy; {new Date().getFullYear()} Darius Paul Bacate. All rights reserved.
                 </Copyright>
             </FooterWrapper>
         </FooterContainer>

@@ -37,23 +37,23 @@ const Wrapper = styled.div`
 `;
 
 const App = () => {
-    const [loading, setLoading] = useState(true); // State for loading indicator
+    const [loading, setLoading] = useState(true);
     const [mode, setMode] = useState(true);
     const [openModal, setOpenModal] = useState({ state: false, project: null });
-    const progressRef = useRef(null); // Ref for progress bar
+    const progressRef = useRef(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setLoading(false); // Simulate delay and hide loading indicator
-        }, 2000); // Adjust the delay time as needed
+            setLoading(false);
+        }, 2000);
 
         return () => clearTimeout(timer);
-    }, []); // Run only once after the component mounts
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
             if (progressRef.current) {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollTop = document.documentElement.scrollTop;
                 const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrollProgress = (scrollTop / windowHeight) * 100;
                 progressRef.current.style.width = `${scrollProgress}%`;
