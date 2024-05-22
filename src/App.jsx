@@ -84,7 +84,7 @@ const App = () => {
         <div className="App">
                 <ThemeProvider theme={mode ? darkTheme : lightTheme}>
                     <Router>
-                        {loading ? (
+                        {loading ? ( 
                             <Loader />
                         ) : (
                             <>
