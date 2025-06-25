@@ -20,7 +20,9 @@ import vite_svg from "../Images/icons/vite-svgrepo-com.svg";
 import rt_svg from "../Images/icons/redux-svgrepo-com.svg";
 import html_svg from "../Images/icons/html-5-svgrepo-com.svg";
 import css_svg from "../Images/icons/css-3-svgrepo-com.svg";
+import styled_svg from "../Images/icons/styled-components-svgrepo-com.svg";
 import js_svg from "../Images/icons/javascript-svgrepo-com.svg";
+import typescript_svg from "../Images/icons/typescript-svgrepo-com.svg";
 import jquery_svg from "../Images/icons/jquery-svgrepo-com.svg";
 import bootstrap_svg from "../Images/icons/bootstrap-svgrepo-com.svg";
 import material_svg from "../Images/icons/material-ui-svgrepo-com.svg";
@@ -35,6 +37,8 @@ import nodejs_svg from "../Images/icons/nodejs-svgrepo-com.svg";
 import json_svg from "../Images/icons/json2-svgrepo-com.svg";
 import swift_svg from "../Images/icons/swift-svgrepo-com.svg";
 import obj_svg from "../Images/icons/apple_objectivec-icon.svg";
+import redis from "../Images/icons/redis-svgrepo-com.svg";
+import socket from "../Images/icons/socket-io-svgrepo-com.svg";
 
 import git_svg from "../Images/icons/git-svgrepo-com.svg";
 import gitkraken_svg from "../Images/icons/gitkraken-svgrepo-com.svg";
@@ -47,6 +51,8 @@ import trello_svg from "../Images/icons/trello-color-svgrepo-com.svg";
 import slack_svg from "../Images/icons/slack-svgrepo-com.svg";
 import ds_svg from "../Images/icons/google-data-studio.svg";
 import jira_svg from "../Images/icons/jira-svgrepo-com.svg";
+import insomnia from "../Images/icons/insomnia-svgrepo-com.svg";
+import devops from "../Images/icons/azure-devops-svgrepo-com.svg";
 
 import vss from "../Images/work/vss.webp";
 import acn from "../Images/work/acn.webp";
@@ -129,6 +135,14 @@ export const skills = [
         image: js_svg,
       },
       {
+        name: "TypeScript",
+        image: typescript_svg,
+      },
+      {
+        name: "Styled Components",
+        image: styled_svg,
+      },
+      {
         name: "JQuery",
         image: jquery_svg,
       },
@@ -174,6 +188,14 @@ export const skills = [
         image: nodejs_svg,
       },
       {
+        name: "Redis",
+        image: redis,
+      },
+      {
+        name: "Socket IO",
+        image: socket,
+      },
+      {
         name: "JsonServer",
         image: json_svg,
       },
@@ -212,12 +234,12 @@ export const skills = [
         image: github_svg,
       },
       {
-        name: "VS Code",
-        image: vscode_svg,
+        name: "Azure Devops",
+        image: devops,
       },
       {
-        name: "PHP Storm",
-        image: phpstorm_svg,
+        name: "VS Code",
+        image: vscode_svg,
       },
       {
         name: "Postman",
@@ -236,8 +258,16 @@ export const skills = [
         image: slack_svg,
       },
       {
+        name: "PHP Storm",
+        image: phpstorm_svg,
+      },
+      {
         name: "JIRA",
         image: jira_svg,
+      },
+      {
+        name: "Insomnia",
+        image: insomnia,
       },
     ],
   },
@@ -248,9 +278,9 @@ export const experiences = [
   {
     id: 0,
     img: vss,
-    role: "Senior Full-Stack Developer",
+    role: "Full-Stack Developer",
     company: "Virtual Staffing Solutions",
-    date: "Sep 2024 - Present",
+    date: "July 2024 - Present",
     desc: "Working on the frontend and backend of the web applications for the company.",
     skills: [
       "React JS",
@@ -260,13 +290,17 @@ export const experiences = [
       "PHP - Laravel",
       "JavaScript",
       "TypeScript",
-      "Redux Tookit",
+      "Redux Toolkit",
       "MySQL",
       "Node Js",
       "PostMan",
       "Tailwind",
+      "Daisy UI",
       "Jira",
       "Redis",
+      "Styled Components",
+      "Framer Motion",
+      "Socket IO",
     ],
   },
   {
@@ -274,7 +308,7 @@ export const experiences = [
     img: acn,
     role: "Senior Software Engineer",
     company: "Accenture Inc.",
-    date: "Nov 2022 - July 2024",
+    date: "Nov 2022 - June 2024",
     desc: "Working on the frontend of the web application using ReactJS, Redux, and Tailwind.",
     skills: [
       "React JS",
@@ -282,12 +316,14 @@ export const experiences = [
       "AWS",
       "PHP",
       "JavaScript",
-      "Redux Tookit",
+      "Redux Toolkit",
       "MySQL",
       "Node Js",
-      "Next Js",
       "PostMan",
+      "Insomnia",
+      "Azure DevOps",
       "Tailwind",
+      "WordPress",
     ],
   },
   {
