@@ -6,6 +6,7 @@ import crud from "../images/projects/react-crud-toolkit.webp";
 import tenzies from "../images/projects/tenzies.webp";
 import msg from "../images/projects/web-messaging-firebase.webp";
 import darbot from "../images/projects/darbot.png";
+import workspace from "../images/projects/workspace.png";
 // import ecart from '../images/react-ecart.png'
 import datastudio from "../images/projects/datastudio.webp";
 import brainwave from "../images/projects/Brainwave Quiz Master.webp";
@@ -399,7 +400,7 @@ export const projects = [
   {
     id: 9,
     title: "Fortress",
-    date: "Sep 2019 - Present",
+    date: "Sep 2019 - 2022",
     description:
       "A website that consolidates all databases for every department, allowing access through accounts. It provides a user-friendly interface that displays chart reports, automates data computations, and facilitates file dumping and storage.",
     image: fortress,
@@ -421,6 +422,33 @@ export const projects = [
     github: "",
     webapp:
       "https://docs.google.com/presentation/d/1jWMntWIKQ_N0aCt7C-9z31_4szewIBVF/edit?usp=sharing&ouid=109611579478848088730&rtpof=true&sd=true",
+  },
+  {
+    id: 11,
+    title: "WorkSpace",
+    date: "July 2024 - Present",
+    description:
+      "A tool that allows users to manage their tasks, schedules, and events. It provides a user-friendly interface for creating, updating, and deleting tasks, as well as viewing them in a calendar format. The application also supports real-time updates and notifications.",
+    image: workspace,
+    tags: [
+      "Laravel",
+      "ReactJs - Vite",
+      "JavasScript ES6",
+      "Node Js - Express",
+      "TypeScript",
+      "Tailwind CSS - Daisy UI",
+      "FullCalendar JS",
+      "MySQL",
+      "GitHub",
+      "Socket IO",
+      "Redis",
+      "Framer Motion",
+      "Redux Toolkit",
+      "HeroIcons",
+    ],
+    category: "web app",
+    github: "",
+    webapp: "https://staging-workspace.vssolutionsph.com/",
   },
   {
     id: 10,
@@ -461,23 +489,26 @@ export const projects = [
       "Redux Toolkit",
       "Tailwind",
       "HeroIcons",
+      "Axios",
+      "React Toastify",
+      "React Router",
     ],
     category: "web app",
     github: "https://github.com/What-a-tops/vite-redux-json",
     webapp: "https://what-a-tops.github.io/vite-redux-json/",
   },
-  {
-    id: 2,
-    title: "Message Web App",
-    date: "April 2023 - May 2023",
-    description:
-      "A simple messaging app that it is realtime through Firebase with realtime chats between user accounts.",
-    image: msg,
-    tags: ["React", "Vite", "MUI", "Firebase"],
-    category: "web app",
-    github: "https://github.com/What-a-tops/react-firebase-chat",
-    webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Message Web App",
+  //   date: "April 2023 - May 2023",
+  //   description:
+  //     "A simple messaging app that it is realtime through Firebase with realtime chats between user accounts.",
+  //   image: msg,
+  //   tags: ["React", "Vite", "MUI", "Firebase"],
+  //   category: "web app",
+  //   github: "https://github.com/What-a-tops/react-firebase-chat",
+  //   webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
+  // },
   {
     id: 3,
     title: "DarBot",
