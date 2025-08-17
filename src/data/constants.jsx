@@ -100,7 +100,7 @@ export const Bio = {
   roles: ["Full Stack Developer", "Web Developer", "Programmer"],
   description:
     "Eager and flexible, always up for new challenges. With a positive mindset and a thirst for growth, Always excited to learn and excel.",
-  github: "https://github.com/What-a-tops",
+  github: "https://github.com/dadots",
   resume:
     "https://drive.google.com/file/d/1FylYiT415o43xnXaqeEdgDgkJfFEvWOH/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/darius-paul-bacate-03805813a/",
@@ -394,7 +394,7 @@ export const projects = [
     image: brainwave,
     tags: ["PHP", "MVC", "OOP", "CSS", "MYSQL", "Materialized CSS"],
     category: "web app",
-    github: "https://github.com/What-a-tops/brainwave",
+    github: "https://github.com/dadots/brainwave",
     webapp: "",
   },
   {
@@ -470,7 +470,7 @@ export const projects = [
     image: tenzies,
     tags: ["React Js", "CSS", "ES6"],
     category: "web app",
-    github: "https://github.com/What-a-tops/react-tenzies-game",
+    github: "https://github.com/dadots/react-tenzies-game",
     webapp:
       "https://64f1a990e5326045a42093b6--bejewelled-kleicha-4f81d2.netlify.app/",
   },
@@ -494,8 +494,8 @@ export const projects = [
       "React Router",
     ],
     category: "web app",
-    github: "https://github.com/What-a-tops/vite-redux-json",
-    webapp: "https://what-a-tops.github.io/vite-redux-json/",
+    github: "https://github.com/dadots/vite-redux-json",
+    webapp: "https://dadots.github.io/vite-redux-json/",
   },
   // {
   //   id: 2,
@@ -506,7 +506,7 @@ export const projects = [
   //   image: msg,
   //   tags: ["React", "Vite", "MUI", "Firebase"],
   //   category: "web app",
-  //   github: "https://github.com/What-a-tops/react-firebase-chat",
+  //   github: "https://github.com/dadots/react-firebase-chat",
   //   webapp: "https://main--ornate-kleicha-79f9ba.netlify.app/",
   // },
   {
@@ -518,7 +518,7 @@ export const projects = [
     image: darbot,
     tags: ["React", "Vite", "CSS", "ES6", "React Chabot-Kit"],
     category: "web app",
-    github: "https://github.com/What-a-tops/darbot",
+    github: "https://github.com/dadots/darbot",
     webapp: "https://precious-cassata-8d3fdb.netlify.app/",
   },
   {
@@ -544,8 +544,8 @@ export const projects = [
       "Framer Motion",
     ],
     category: "web app",
-    github: "https://github.com/What-a-tops/wedding",
-    webapp: "https://what-a-tops.github.io/wedding/",
+    github: "https://github.com/dadots/wedding",
+    webapp: "https://dadots.github.io/wedding/",
   },
   // {
   //     id: 3,
@@ -556,7 +556,7 @@ export const projects = [
   //     image: ecart,
   //     tags: ["React", "Vite", "CSS", "ES6"],
   //     category: "web app",
-  //     github: "https://github.com/What-a-tops/react-ecart",
+  //     github: "https://github.com/dadots/react-ecart",
   //     webapp: "https://main--unique-biscochitos-97cf49.netlify.app/"
   // },
 ];
