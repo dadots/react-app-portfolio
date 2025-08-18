@@ -102,7 +102,7 @@ export const Bio = {
     "Eager and flexible, always up for new challenges. With a positive mindset and a thirst for growth, Always excited to learn and excel.",
   github: "https://github.com/dadots",
   resume:
-    "https://drive.google.com/file/d/1FylYiT415o43xnXaqeEdgDgkJfFEvWOH/view?usp=sharing",
+    "https://drive.google.com/file/d/1kYg7oQwedtUFZYqUXre5JjynoKdaJzWY/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/darius-paul-bacate-03805813a/",
   facebook: "https://www.facebook.com/iezbay",
 };
